@@ -1,0 +1,169 @@
+submission.csv:
+base=0, criterion='gini', random_state=5, n_estimators=300, min_samples_split=2
+
+submission2.csv:
+base=1, criterion='entropy', random_state=5, n_estimators=340, min_samples_split=2
+
+submission3.csv:
+base=2, criterion='entropy', random_state=5, n_estimators=340, min_samples_split=2
+
+submission4.csv:
+base=2,
+multiple classifier: 5x(criterion='entropy', random_state=2, n_estimators=340, min_samples_split=2)
+
+submission5.csv:
+base=3, criterion='entropy', random_state=5, n_estimators=340, min_samples_split=2
+
+submission6.csv:
+base=3, criterion='entropy', random_state=5, n_estimators=380, min_samples_split=2
+
+submission7.csv:
+base=3, criterion='gini', random_state=5, n_estimators=360, min_samples_split=2
+
+submission8.csv:
+base=3, criterion='entropy', random_state=5, n_estimators=360, min_samples_split=2
+
+submission9.csv:
+base=3, criterion='entropy', random_state=5, n_estimators=450, min_samples_split=2
+
+submission10.csv:
+base=4, criterion='entropy', random_state=5, n_estimators=500, min_samples_split=2
+
+
+
+
+
+
+
+
+
+
+
+07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X23, X24
+n_estimator=300, min_samples_split=2              0.7946
+n_estimator=330, min_samples_split=2              0.7948
+n_estimator=350, min_samples_split=2              0.7947
+
+5to7, X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X23, X24
+n_estimator=330, min_samples_split=2              0.7942
+
+X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24 +
+  last(X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24, gt)
+n_estimator=340, min_samples_split=2, entropy     0.8261 !!!!!!
+n_estimator=380, min_samples_split=2, entropy     0.8261
+
+X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24 +
+  last(X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24, gt) +
+  last_last(X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24, gt)
+n_estimator=340, min_samples_split=2, entropy     0.8279 !!!!!!
+
+X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24
+n_estimator=350, min_samples_split=2              0.7966
+n_estimator=350, min_samples_split=2, entropy     0.7982 !!
+n_estimator=340, min_samples_split=2, entropy     0.7987 !!!!
+n_estimator=330, min_samples_split=2              0.7976
+n_estimator=330, min_samples_split=2, entropy     0.7982 !!
+n_estimator=310, min_samples_split=2              0.7974
+n_estimator=310, min_samples_split=2, entropy     0.7965
+n_estimator=300, min_samples_split=2              0.7979 !!
+n_estimator=300, min_samples_split=2, entropy     0.7971
+n_estimator=270, min_samples_split=2              0.7972
+n_estimator=250, min_samples_split=2              0.7965
+n_estimator=250, min_samples_split=3              0.7955
+
+2to7, X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24
+n_estimator=300, min_samples_split=2              0.7888
+n_estimator=320, min_samples_split=2              0.7888
+n_estimator=300, min_samples_split=2              0.7888
+
+X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24, 21to24
+n_estimator=300, min_samples_split=2              0.7923
+n_estimator=330, min_samples_split=2              0.7926
+n_estimator=340, min_samples_split=2              0.7923
+n_estimator=350, min_samples_split=2              0.7929 !!
+n_estimator=360, min_samples_split=2              0.7927
+n_estimator=370, min_samples_split=2              0.7926
+
+2to7, X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24, 21to24
+n_estimator=300, min_samples_split=2              0.7857
+n_estimator=330, min_samples_split=2              0.7863
+n_estimator=350, min_samples_split=2              0.7929 !!
+n_estimator=370, min_samples_split=2              0.7871
+
+5to7, X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24
+n_estimator=280, min_samples_split=2              0.7943
+n_estimator=300, min_samples_split=2              0.7952 !!
+n_estimator=300, min_samples_split=2, entropy     0.7948
+n_estimator=330, min_samples_split=2              0.7948
+
+
+2to7, 5to7, X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24
+n_estimator=280, min_samples_split=2              0.7842
+n_estimator=300, min_samples_split=2              0.7845
+n_estimator=330, min_samples_split=2              0.7853
+n_estimator=350, min_samples_split=2              0.7855
+n_estimator=370, min_samples_split=2              0.7860
+n_estimator=370, min_samples_split=2, entropy     0.7880
+n_estimator=390, min_samples_split=2              0.7859
+n_estimator=390, min_samples_split=2, entropy     0.7881
+n_estimator=410, min_samples_split=2, entropy     0.7885
+n_estimator=430, min_samples_split=2, entropy     0.7889 !!
+n_estimator=450, min_samples_split=2, entropy     0.7885
+
+
+2to7, 5to7, X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24, 21to24
+n_estimator=330, min_samples_split=2              0.7839
+n_estimator=350, min_samples_split=2, entropy     0.7859
+n_estimator=370, min_samples_split=2, entropy     0.7864
+n_estimator=390, min_samples_split=2, entropy     0.7866
+
+X19: 0.4396
+X19, X20: 0.4880
+X19, X20, X21: 0.5427
+X19, X20, X21, X22: 0.6016
+X19, X20, X21, X22, X23: 0.5955
+X19, X20, X21, X22, X23, X24: 0.6329
+X18, X19, X20, X21, X22, X23, X24: 0.6808
+X17, X18, X19, X20, X21, X22, X23, X24: 0.7028
+X16, X17, X18, X19, X20, X21, X22, X23, X24: 0.7272
+X15, X16, X17, X18, X19, X20, X21, X22, X23, X24: 0.7256
+X14, X15, X16, X17, X18, X19, X20, X21, X22, X23, X24: 0.7234
+X14, X16, X17, X18, X19, X20, X21, X22, X23, X24: 0.7293
+X13, X14, X16, X17, X18, X19, X20, X21, X22, X24: 0.7287
+X12, X13, X14, X16, X17, X18, X19, X20, X21, X22, X24: 0.7201
+X12, X13, X14, X15, X16, X17, X18, X19, X20, X21, X22, X24: 0.7186
+X11, X12, X13, X14, X15, X16, X17, X18, X19, X20, X21, X22, X24: 0.7102
+X11, X12, X13, X14, X16, X17, X18, X19, X20, X21, X22, X24: 0.7151
+X16, X17, X18, X19, X20, X21, X22, X24: 0.7293
+X16, X17, X18, X19, X20, X21, X22, X23, X24: 0.7273
+
+X14, X16, X17, X18, X19, X20, X21, X22, X24: 0.7348
++ X11             : 0.7250
++ X12             : 0.7246
++ X11, X12        : 0.7166
++ X10             : 0.7246
++ X10, X11        : 0.7166
++ X09             : 0.7425
++ X08             : 0.7371
++ X08, X09        : 0.7439
++ X07             : 0.7374
++ X07, X08        : 0.7374
++ X07, X09        : 0.7445
++ X07, X08, X09   : 0.7456
++ X06             : 0.7360
++ X06, X07        : 0.7383
++ X06, X07, X08       : 0.7391
++ X06, X07, X08, X09  : 0.7440
+
+X07, X08, X09, X14, X16, X17, X18, X19, X20, X21, X22, X24: 0.7456
++ X05                 : 0.7435
++ X05, X06            : 0.7421
++ X04                 : 0.7383
++ X04, X05, X06       : 0.7358
++ X03                 : 0.7401
++ X03, X05            : 0.7352
++ X02                 : 0.7395
++ X02, X03            : 0.7321
++ X02, X03, X05       : 0.7327
++ X01                 : 0.7387
++ X01, X05            : 0.7386
